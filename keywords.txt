@@ -1,0 +1,29 @@
+#	####################################################
+#	СИНТАКСИЧЕСКАЯ РАСКРАСКА ДЛЯ БИБИЛИОТЕКИ:
+#	iarduino_MultiServo
+#	####################################################
+#	ТИПЫ ДАННЫХ:							   (KEYWORD1)
+	iarduino_MultiServo	KEYWORD1
+#	####################################################
+#	МЕТОДЫ И ФУНКЦИИ:						   (KEYWORD2)
+	begin	KEYWORD2
+	servoSet	KEYWORD2
+	servoWrite	KEYWORD2
+	analogWrite	KEYWORD2
+	digitalWrite	KEYWORD2
+	analogRead	KEYWORD2
+	bus	KEYWORD2
+	restart	KEYWORD2
+	invert	KEYWORD2
+	outdrv	KEYWORD2
+	outState	KEYWORD2
+	extClock	KEYWORD2
+	reg	KEYWORD2
+#	####################################################
+#	КОНСТАНТЫ:								   (LITERAL1)
+	IMPEDANCE	LITERAL1
+	SERVO_ALL	LITERAL1
+	SERVO_SG90	LITERAL1
+	SERVO_MG90	LITERAL1
+	SERVO_MG996R	LITERAL1
+	SERVO_FutabaS3003	LITERAL1
