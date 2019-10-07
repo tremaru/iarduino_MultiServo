@@ -19,7 +19,7 @@
 
 **Управление сервоприводами SG90, MG90, MG996R, Futaba S3003:**
 
-```C++
+```Arduino
 #include <iarduino_MultiServo.h>        //  Подключаем библиотеку iarduino_MultiServo
 iarduino_MultiServo MSS;                //  Объявляем объект MSS, для работы с библиотекой
 void setup() {
