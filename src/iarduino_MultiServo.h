@@ -1,5 +1,5 @@
 //	Библиотека для работы с Multi Servo Shield: http://iarduino.ru/shop/Expansion-payments/multi-servo-shield-na-16-servoprivodov.html
-//  Версия: 1.1.1
+//  Версия: 1.1.3
 //  Последнюю версию библиотеки Вы можете скачать по ссылке: http://iarduino.ru/file/255.html
 //  Подробное описание функции бибилиотеки доступно по ссылке: http://wiki.iarduino.ru/page/multi-servo-shield-na-16-servoprivodov/
 //  Библиотека является собственностью интернет магазина iarduino.ru и может свободно использоваться и распространяться!
