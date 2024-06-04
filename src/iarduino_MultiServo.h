@@ -1,5 +1,5 @@
 //	Библиотека для работы с Multi Servo Shield: http://iarduino.ru/shop/Expansion-payments/multi-servo-shield-na-16-servoprivodov.html
-//  Версия: 1.1.4
+//  Версия: 1.1.5
 //  Последнюю версию библиотеки Вы можете скачать по ссылке: http://iarduino.ru/file/255.html
 //  Подробное описание функции бибилиотеки доступно по ссылке: http://wiki.iarduino.ru/page/multi-servo-shield-na-16-servoprivodov/
 //  Библиотека является собственностью интернет магазина iarduino.ru и может свободно использоваться и распространяться!
@@ -39,10 +39,10 @@ class iarduino_MultiServo{																					//
 		iarduino_MultiServo				(){	selI2C = new iarduino_I2C_Select; }								//	Конструктор основного класса
 	/**	основные пользовательские функции **/																//
 		#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__)									//
-		void		begin				(TwoWire* i=&Wire, uint8_t id=0x40, uint16_t pwm=50){ selI2C->begin(i); PCA_begin(id,pwm); }	//	Определяем функцию инициализации модуля	(Параметр:  объект для работы с аппаратной шиной I2C, ID адрес, частота ШИМ в Гц).
+		void		begin				(TwoWire* i=&Wire, uint8_t id=0x40, uint16_t pwm=50){ selI2C->init(i); PCA_begin(id,pwm); }	//	Определяем функцию инициализации модуля	(Параметр:  объект для работы с аппаратной шиной I2C, ID адрес, частота ШИМ в Гц).
 		#endif																								//
 		#if defined(iarduino_I2C_Software_h)																//
-		void		begin				(SoftTwoWire* i  , uint8_t id=0x40, uint16_t pwm=50){ selI2C->begin(i); PCA_begin(id,pwm); }	//	Определяем функцию инициализации модуля	(Параметр:  объект для работы с программной шиной I2C, ID адрес, частота ШИМ в Гц).
+		void		begin				(SoftTwoWire* i  , uint8_t id=0x40, uint16_t pwm=50){ selI2C->init(i); PCA_begin(id,pwm); }	//	Определяем функцию инициализации модуля	(Параметр:  объект для работы с программной шиной I2C, ID адрес, частота ШИМ в Гц).
 		#endif																								//
 		void	analogWrite				(uint8_t, uint16_t, uint16_t=0);									//	установка	ШИМ на выходе								(№ выхода от 0 до 15, коэффициент заполнения от 0 до 4095, фазовый сдвиг от 0 до 4095)
 		void	digitalWrite			(uint8_t, bool);													//	установка	логического уровня на выходе				(№ выхода от 0 до 15, LOW / HIGH)
