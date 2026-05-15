@@ -1,5 +1,5 @@
 //	Библиотека для работы с Multi Servo Shield: http://iarduino.ru/shop/Expansion-payments/multi-servo-shield-na-16-servoprivodov.html
-//  Версия: 1.1.5
+//  Версия: 1.1.6
 //  Последнюю версию библиотеки Вы можете скачать по ссылке: http://iarduino.ru/file/255.html
 //  Подробное описание функции бибилиотеки доступно по ссылке: http://wiki.iarduino.ru/page/multi-servo-shield-na-16-servoprivodov/
 //  Библиотека является собственностью интернет магазина iarduino.ru и может свободно использоваться и распространяться!
@@ -38,7 +38,7 @@ class iarduino_MultiServo{																					//
 	/**	Конструктор класса **/																				//
 		iarduino_MultiServo				(){	selI2C = new iarduino_I2C_Select; }								//	Конструктор основного класса
 	/**	основные пользовательские функции **/																//
-		#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__)									//
+		#if defined(TwoWire_h) || defined(__ARDUINO_WIRE_IMPLEMENTATION__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega32U4__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega2560__) || defined(ESP8266) || defined(ESP32) || defined(ARDUINO_ARCH_RP2040) || defined(RENESAS_CORTEX_M4) // Если подключена библиотека Wire или платы её поддерживают...
 		void		begin				(TwoWire* i=&Wire, uint8_t id=0x40, uint16_t pwm=50){ selI2C->init(i); PCA_begin(id,pwm); }	//	Определяем функцию инициализации модуля	(Параметр:  объект для работы с аппаратной шиной I2C, ID адрес, частота ШИМ в Гц).
 		#endif																								//
 		#if defined(iarduino_I2C_Software_h)																//

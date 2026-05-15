@@ -13,7 +13,7 @@
 SoftTwoWire sWire(3,4);                                      //   Создаём объект программной шины I2C указав выводы которым будет назначена роль линий: SDA, SCL.
                                                              //
 #include <iarduino_MultiServo.h>                             // Подключаем библиотеку iarduino_MultiServo.
-iarduino_MultiServo MSS;                                     // Объявляем объект MSS, для работы с Multi Servo Shield на 16 сервоприводов используя библиотеку iarduino_MultiServo.
+iarduino_MultiServo MSS;                                     // Создаём объект MSS, для работы с Multi Servo Shield на 16 сервоприводов используя библиотеку iarduino_MultiServo.
                                                              //
 void setup(){                                                //
      MSS.begin(&sWire, 0x40, 1000);                          // Инициируем работу с модулем, указав: ссылку на объект для работы с шиной I2C на которой находится модуль, адрес модуля на шине I2C, частота сигнала ШИМ от 1 до 1526 Гц.

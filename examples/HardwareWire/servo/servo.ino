@@ -10,7 +10,7 @@
                                                 //
 #include <Wire.h>                               // Подключаем библиотеку для работы с аппаратной шиной I2C, до подключения библиотеки iarduino_MultiServo.
 #include <iarduino_MultiServo.h>                // Подключаем библиотеку iarduino_MultiServo.
-iarduino_MultiServo MSS;                        // Объявляем объект MSS, для работы с Multi Servo Shield на 16 сервоприводов используя библиотеку iarduino_MultiServo.
+iarduino_MultiServo MSS;                        // Создаём объект MSS, для работы с Multi Servo Shield на 16 сервоприводов используя библиотеку iarduino_MultiServo.
                                                 //
 void setup(){                                   //
 //   Указываем параметры сервоприводов:         // Параметры указываются до инициализации модуля.
